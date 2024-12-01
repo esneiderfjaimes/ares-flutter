@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1014252413822",
+    "project_id": "ares-by-nei",
+    "storage_bucket": "ares-by-nei.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014252413822:android:43b927f2e26285dac0c92f",
+        "android_client_info": {
+          "package_name": "com.nei.ares"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014252413822-2dn0ncrp2appd3o0c6h7u5p6hhtth733.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyQKU4wtKSL8db5C6Q0CuriDqdMs48TTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014252413822-2dn0ncrp2appd3o0c6h7u5p6hhtth733.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
