@@ -17,5 +17,8 @@ samples, guidance on mobile development, and a full API reference.
 
 
 run flutterfire configure
+
 add .env file
 GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT_ID
+
+and add google-services.json

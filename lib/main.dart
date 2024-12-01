@@ -2,6 +2,7 @@ import 'package:ares/firebase_options.dart';
 import 'package:ares/screens/google_sign_in_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -28,7 +29,9 @@ void main() async {
   );
 
   // Ideal time to initialize
-  await FirebaseAuth.instance.useAuthEmulator('localhost', 8080);
+  if (kIsWeb) {
+    await FirebaseAuth.instance.useAuthEmulator('localhost', 8080);
+  }
 
   logger.i('Setting up locator');
   setupLocator();
