@@ -1,4 +1,6 @@
+import 'package:ares/firebase_options.dart';
 import 'package:ares/screens/google_sign_in_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,17 +10,13 @@ import 'locator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp(
-    options: const FirebaseOptions(
-      apiKey: "AIzaSyCmWB7Y7VLzNLOOki1pr5w_yxeBoQOsQJI",
-      projectId: "ares-by-nei",
-      messagingSenderId: "1014252413822",
-      appId: "1:1014252413822:web:46869a991e0a2843c0c92f",
-    ),
+    options: DefaultFirebaseOptions.currentPlatform,
   );
 
   // Ideal time to initialize
- // await FirebaseAuth.instance.useAuthEmulator('localhost', 9099);
+  await FirebaseAuth.instance.useAuthEmulator('localhost', 8080);
 
   setupLocator();
 
