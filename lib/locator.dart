@@ -1,5 +1,6 @@
 // lib/locator.dart
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -13,7 +14,7 @@ void setupLocator() {
   locator.registerLazySingleton<GoogleSignInService>(
     () => GoogleSignInService(
       googleSignIn: GoogleSignIn(
-        clientId: '1014252413822-2dn0ncrp2appd3o0c6h7u5p6hhtth733.apps.googleusercontent.com',
+        clientId: dotenv.env['GOOGLE_CLIENT_ID'],
       ),
       auth: FirebaseAuth.instance,
     ),

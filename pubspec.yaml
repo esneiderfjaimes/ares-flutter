@@ -47,6 +47,8 @@ dependencies:
   firebase_auth: ^5.3.3
   google_sign_in: ^6.2.2
 
+  flutter_dotenv: ^5.0.2
+
   # Logger
   logger: ^1.0.0
   equatable: ^2.0.7
