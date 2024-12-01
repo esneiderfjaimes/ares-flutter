@@ -1,4 +1,5 @@
 import 'package:ares/data/authentication/google_sign_in_service.dart';
+import 'package:ares/main.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'google_sign_in_event.dart';
@@ -19,6 +20,7 @@ class GoogleSignInBloc extends Bloc<GoogleSignInEvent, GoogleSignInState> {
           emit(GoogleSignInFailure("Autenticación cancelada."));
         }
       } catch (e) {
+        logger.e(e);
         emit(GoogleSignInFailure("Error al iniciar sesión con Google."));
         rethrow;
       }
